@@ -3,9 +3,10 @@ import mysql.connector
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password=""
+  password="",
+  database="Animali"
 )
 
 mycursor = mydb.cursor()
 
-mycursor.execute("CREATE DATABASE Animali")
+mycursor.execute("CREATE TABLE Mammiferi (name VARCHAR(255), specie VARCHAR(255))")

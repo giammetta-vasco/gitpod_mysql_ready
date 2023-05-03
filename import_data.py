@@ -9,6 +9,7 @@ mydb = mysql.connector.connect(
 )
 mycursor = mydb.cursor()
 
+mycursor.execute("CREATE DATABASE IF NOT EXISTS Calciatori-Milan")
 
 #Create the table for the csv data (if not exists)
 mycursor.execute("""

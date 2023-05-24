@@ -18,6 +18,6 @@ app = Flask(__name__)
 def unitList():
     mycursor.execute("SELECT * FROM Calciatori_Milan")
     myresult = mycursor.fetchall()
-    return render_template('calciatori.html', units=myresult)
+    return render_template('calciatori.html', players=myresult)
 
 

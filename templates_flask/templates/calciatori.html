@@ -11,28 +11,27 @@
    <div class="center-image">
 
 
-    <div>
-      <a href="https://www.acmilan.com/it"> <img src="../static/images/acmilan.jpg" /> </a>
-    </div>
-   
+      <div>
+         <a href="https://www.acmilan.com/it"> <img src="../static/images/acmilan.jpg" /> </a>
+      </div>
+
       <hr>
-  
-       <div> 
-      <a href="https://www.youtube.com/watch?v=DnZ0VGripq0"> <img src="../static/images/scudetto.jpg" /> </a>
-       </div> 
-     
-   </div>   
-   
+
+      <div>
+         <a href="https://www.youtube.com/watch?v=DnZ0VGripq0"> <img src="../static/images/scudetto.jpg" /> </a>
+      </div>
+
+   </div>
 
 
-{% for item in players %}
-<section class="squadra">
-   
-   <p>{{ item[0] }}</p>
-   <img src="../static/images/{{item[0]}}.jpg">
-</section>
-{% endfor %}   
-
+   <div class="flex_img">
+      {% for item in players %}
+      <section class="squadra">
+         <p>{{ item[0] }}</p>
+        <a href="/Cognome/{{item[0]}}"> <img class="small_img " src="../static/images/{{item[0]}}.jpg"></a>
+      </section>
+      {% endfor %}
+   </div>
 
 
 

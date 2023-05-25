@@ -20,4 +20,8 @@ def unitList():
     myresult = mycursor.fetchall()
     return render_template('calciatori.html', players=myresult)
 
-
+@app.route('/Cognome/<calciatore>')    
+def calcio(calciatore):
+    mycursor.execute("SELECT * FROM Calciatori_Milan where Cognome='{}'".format(calciatore))
+    myresult = mycursor.fetchall()
+    return render_template('cognome.html', tabella_calciatori=myresult)

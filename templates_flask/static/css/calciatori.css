@@ -37,3 +37,20 @@ hr {
     background-color: red;
     border: none;
 }
+
+p { color: red;
+
+
+}
+
+.small_img {
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+}
+
+.flex_img {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}

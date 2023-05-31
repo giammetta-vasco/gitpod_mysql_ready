@@ -2,15 +2,44 @@
 <html>
 
 <head>
-    {% for item in players %}
-    
-
-
-
-
-
+    {% for item in tabella_calciatori %}
+    <title>{{item [0]}}</title>
+    {% endfor %}
+    <link rel="stylesheet" href="../static/css/calciatori.css" />
 
 </head>
+<link rel="stylesheet" href="../static/css/cognome.css">
+
+<body>
+    {% for item in tabella_calciatori %}
+    <h1>{{item [0]}} {{item [1]}}</h1>
+    <section class="squadra">
+        <img class="foto_img centrato" src="../static/images/{{item[0]}}.jpg" width="400">    
+        <p>
+            Ruolo: {{item [2]}}
+        </p>
+        <p>
+            Numero: {{item [3]}}
+        </p>
+        <p>
+            Gol segnati: {{item [4]}}
+        </p>
+        <p>
+            Assist: {{item [5]}}
+        </p>
+        <p>
+            Valore: {{item [6]}}
+        </p>
+        <p>
+            Età: {{item [7]}}
+        </p>
+        <p>
+            Nazionalità: {{item [8]}}
+        </p>
+    </section>
+
+</body>
+{% endfor %}
 
 
 
